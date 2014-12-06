@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="row" id="bigCallout">
+		<div class="carousel slide" id="myCarousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+				<li data-slide-to="1" data-target="#myCarousel"></li>
+				<li data-slide-to="2" data-target="#myCarousel"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active" id="slide1">
+					<img src="iphone-6-camera.jpg">
+					<div class="carousel-caption">
+						<h2>iPhone 6</h2>
+						<h4>64GB llegando el 10 de Diciembre. Reserva!</h4>
+					</div>
+				</div>
+
+				<div class="item" id="slide2">
+					<img src="htc.jpg">
+					<div class="carousel-caption">
+						<h2>htc one</h2>
+						<h4>Nigga you trippin'</h4>
+					</div>
+				</div>
+
+				<div class="item" id="slide3">
+					<img src="celular 1.jpg">
+					<div class="carousel-caption">
+						<h2>NOKIA LUMIA 930</h2>
+						<h4>Sellado de fabrica!</h4>
+					</div>
+				</div>
+
+				</div><!-- carousel-inner-->	
+				<!-- controls -->
+				<a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+				<a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.carousel').carousel({
+        interval: 4000
+    });
+
+    $('.carousel').carousel('cycle');
+});
+</script>  
