@@ -12,6 +12,10 @@ class WelcomeController < ApplicationController
 	end
 
 	def news
-		render :index
+		
+	end
+
+	def contacto
+		
 	end
 end

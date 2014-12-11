@@ -1,0 +1,21 @@
+<div class="row">
+
+		<h2>Iniciar Sesión</h2>
+</div>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-4">
+
+	<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+	  <div><br />
+	  <%= f.email_field :email, autofocus: true %></div>
+
+	  <div><br />
+	    <%= f.password_field :password,label: "Contraseña", autocomplete: "off" %></div>
+
+	  <div><%= f.submit "Iniciar Sesión" %></div>
+	<% end %>
+
+	<p>¿No tienes cuenta? ¡Crea una <a href="/sign_up">aquí</a>!</p>
+</div>
+</div>

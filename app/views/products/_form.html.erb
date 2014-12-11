@@ -1,0 +1,38 @@
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-4">
+  <%= bootstrap_form_for(@product) do |f| %>
+    <% if @product.errors.any? %>
+      <div class="alert fade-in alert-danger">
+        <div class="close" data-dismiss="alert">x</div>
+          <p><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</p>
+        <ul>
+        <% @product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+      
+    <% end %>
+
+    <div class="field">
+      <%= f.text_field :name, label: "Nombre" %>
+    </div>
+    <div class="field">
+      <%= f.text_area :description, label: "Descripción" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :price, label: "Precio" %>
+    </div>
+
+    <div class="field">
+      <%= f.file_field :picture %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+</div>
